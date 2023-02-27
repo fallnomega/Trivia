@@ -13,6 +13,7 @@ get_new_questions = requests.get(url="https://opentdb.com/api.php?",params=param
 get_new_questions.raise_for_status()
 data = get_new_questions.json()
 question_data = (data['results'])
+print(question_data[0]['question'])
 
 # print(get_new_questions.json())
 # question_data = json.load(get_new_questions)
